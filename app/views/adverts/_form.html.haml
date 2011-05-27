@@ -9,13 +9,9 @@
 				- @advert.errors.full_messages.each do |msg|
 					%li= msg
 
-	.field
-		= f.input :title
-	.field
-		= f.input :teaser
-	.field
-		= f.input :description, :as => :text
-	.field
-		= f.input :active, :as => :radio
+	= f.input :title
+	= f.input :teaser
+	= f.input :description, :as => :text
+	= f.input :active, :as => :radio
 	.actions
 		= f.submit
