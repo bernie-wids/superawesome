@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+	%strong Title:
+	= @advert.title
+	
+%p
+	%strong Teaser:
+	= @advert.teaser
+
+%p
+	%strong Description:
+	= @advert.description
+	
+%p
+	%strong Active:
+	= @advert.active
+	
+= link_to 'Edit', edit_advert_path(@advert)
+|
+= link_to 'Back', adverts_path
