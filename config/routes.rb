@@ -1,5 +1,14 @@
 Superawesome::Application.routes.draw do
+  get "home/index"
+
   resources :adverts
+  
+  match '/:locale' => 'home#index'
+  root :to => 'home#index'
+  
+  scope "(:locale)", :locale => /en|id|pirate/ do
+    resources :home
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
